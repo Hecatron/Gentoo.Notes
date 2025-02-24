@@ -1,0 +1,47 @@
+site_name: Hackspace Manchester Documentation
+site_url: https://docs.hacman.org.uk
+repo_url: https://github.com/HACManchester/documentation/
+
+theme:
+  name: material
+  custom_dir: 'theme'
+  features:
+    - tabs
+
+plugins:
+  - search
+  - emailprotect
+  - mkdocs-video
+  - mdoctag:
+      tagpage_dir: 'tags'
+      data_filename: 'tags.json'
+  - git-revision-date-localized
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: false
+  - attr_list
+  - md_in_html
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+
+    # HighlightJS for coloring in code blocks - https://highlightjs.org/static/demo/
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
+  - assets/js/hljs/config.js
+
+    # Sortable tables
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - assets/js/sorttable/config.js
+
+extra_css:
+    # HighlightJS for coloring in code blocks - https://highlightjs.org/static/demo/
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atelier-dune-light.min.css
